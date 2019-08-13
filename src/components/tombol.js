@@ -7,9 +7,9 @@ import {
 
 } from 'react-native';
 
-const Tombol = ({setHooksProps, teks}) => {
+const Tombol = ({eventProps, teks}) => {
 	return (
-		<TouchableHighlight style={styles.button} onPress={() => setHooksProps()} underlayColor="#FB8C00">
+		<TouchableHighlight style={styles.button} onPress={() => eventProps()} underlayColor="#FB8C00">
 			<View>
 				<Text style={styles.buttonText}>
 					{teks}

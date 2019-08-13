@@ -16,15 +16,19 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { createAppContainer } from "react-navigation";
+
 import Login from './src/screen/login'
 import Home from './src/screen/home'
 
-
+import Route from './src/route/index'
+const RouteRN = createAppContainer(Route)
+// <Fragment>
+//   <View><Home></Home></View>
+// </Fragment>
 const App = () => {
   return (
-    <Fragment>
-      <View><Home></Home></View>
-    </Fragment>
+    <RouteRN></RouteRN>
   );
 };
 

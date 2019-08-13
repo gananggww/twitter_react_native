@@ -19,7 +19,7 @@ import TempatTeks from '../components/tempatTeks'
 const screenWidth = Dimensions.get('window').width
 const screenHeight = Dimensions.get('window').height
 
-const Login = () => {
+const Login = ({navigation}) => {
 	
 	const [count, setCount] = useState(0);
 	
@@ -39,7 +39,7 @@ const Login = () => {
 				</View>
 					
 				<Tombol
-					setHooksProps={() => setCount(count + 1)}
+					eventProps={() => navigation.navigate('Home')}
 					teks='Login'
 				/>
 			</View>
